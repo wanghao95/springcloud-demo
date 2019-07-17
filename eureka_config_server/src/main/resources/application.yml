@@ -1,0 +1,20 @@
+server:
+  port: 8090
+
+#配置本地读取
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/conf
+  application:
+    name: config-server
+  profiles:
+    active: native
+
+#defaultZone不能写成default-zone,否则报错
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/

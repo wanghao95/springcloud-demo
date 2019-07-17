@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+
+
+#配置读取config-server的统一配置文件，当前文件名需要改成bootstrap
+spring:
+  application:
+    name: client
+
+#    name和profiles拼成配置文件名
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: config-server
+  profiles:
+    active: dev
+
+

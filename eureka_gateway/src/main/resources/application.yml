@@ -1,0 +1,26 @@
+server:
+  port: 8084
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+
+spring:
+  application:
+    name: gateway-client
+
+
+#设置路由
+zuul:
+  prefix: /v1
+  routes:
+    helloUrl:
+      path: /helloApi/**
+      serviceId: client
+    feignUrl:
+      path: /feignApi/**
+      serviceId: feign-client
+
+
+
