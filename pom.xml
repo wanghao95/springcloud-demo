@@ -15,7 +15,7 @@
         <module>eureka_feign_client</module>
         <module>eureka_gateway</module>
         <module>eureka_config_server</module>
-        <module>zipkin-server</module>
+        <module>zipkin_server</module>
     </modules>
 
 
