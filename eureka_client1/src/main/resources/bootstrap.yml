@@ -1,3 +1,4 @@
+#这里的配置会被Config-server相同配置覆盖
 server:
   port: 8081
 
